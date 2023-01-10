@@ -5,7 +5,9 @@ const App = () => {
   return (
     <div>
       <div>PUP Care</div>
-      <SearchParams />
+      <div>
+        <SearchParams />
+      </div>
     </div>
   );
 };
