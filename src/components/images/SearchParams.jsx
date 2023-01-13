@@ -76,6 +76,7 @@ const SearchParams = () => {
         </form>
         {pets.map((pet) => (
           <Pet
+            className="pets-element"
             name={pet.name}
             animal={pet.animal}
             breed={pet.breed}
