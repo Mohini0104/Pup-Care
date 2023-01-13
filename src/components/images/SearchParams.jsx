@@ -26,7 +26,12 @@ const SearchParams = () => {
   return (
     <div>
       <div className="col-8 mx-auto">
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            requestPets();
+          }}
+        >
           <label htmlFor="location">Location</label>
           <input
             onChange={(e) => setLocation(e.target.value)}
