@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Pet from "../Pet";
+import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 const BREED = [];
 const SearchParams = () => {
