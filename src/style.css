@@ -2,3 +2,8 @@
     border: 2px solid red;
     font-size: 30px;
 }
+
+img {
+    width: 100px;
+    height: 100px;
+}
