@@ -1,5 +1,10 @@
+body {
+    border: 2px solid black;
+    background-color: #F4E6E0;
+}
+
 .pets-element {
-    border: 2px solid red;
+    border: 3px solid red;
     font-size: 30px;
 }
 

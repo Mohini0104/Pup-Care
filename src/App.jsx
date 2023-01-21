@@ -1,10 +1,11 @@
 import { createRoot } from "react-dom/client";
+import Header from "./components/Header";
 import SearchParams from "./components/SearchParams";
 
 const App = () => {
   return (
     <div>
-      <div>PUP Care</div>
+      <Header />
       <div>
         <SearchParams />
       </div>
