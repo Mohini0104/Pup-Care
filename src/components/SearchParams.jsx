@@ -28,10 +28,10 @@ const SearchParams = () => {
   }
   return (
     <div>
-      <div className="col-12 mx-auto border border-danger d-md-flex py-3">
-        <div className="col-11 col-md-6 mx-auto mx-md-0 border border-danger">
+      <div className="col-12 mx-auto  d-md-flex py-3">
+        <div className="col-11 col-md-6 mx-auto mx-md-0 ">
           <div className="col-md-8 mx-auto">
-            <div className="col-md-12 form-box">
+            <div className="col-md-12 form-box ">
               <form
                 className="form-section  col-12"
                 onSubmit={(e) => {
@@ -116,7 +116,7 @@ const SearchParams = () => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6 my-3 my-md-auto border border-danger">
+        <div className="col-12 col-md-6 my-3 my-md-auto ">
           <Results pets={pets} />
         </div>
       </div>
