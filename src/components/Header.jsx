@@ -1,17 +1,15 @@
-import LogoPink from "./images/LogoPink.png";
+import LogoCircle from "./images/LogoCircle.png";
 const Header = (props) => {
   return (
-    <div className="col-12">
-      <div className="col-11 col-md-5 mx-auto">
-        <div className="col-md-10 mx-auto">
-          <div className="col-12 d-flex justify-content-center">
-            <div className="col-md-3 ">
-              <div className="col-md-12">
-                <img src={LogoPink} alt="" />
+    <div className="col-12 header-container headerBorderBottom py-2">
+      <div className="col-11 col-md-4  mx-auto">
+        <div className="col-md-10 mx-auto ">
+          <div className="col-12 ">
+            <div className="col-5 col-md-5 d-flex justify-content-center mx-auto ">
+              <img src={LogoCircle} alt="" className="w-25  my-auto" />
+              <div className="col-md-6 header-title text-center ms-2 my-auto">
+                PetCare
               </div>
-            </div>
-            <div className="col-md-6">
-              <div className="col-md-12">Pup-Care</div>
             </div>
           </div>
         </div>

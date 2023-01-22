@@ -4,7 +4,7 @@ import SearchParams from "./components/SearchParams";
 
 const App = () => {
   return (
-    <div>
+    <div className="body-boxShadow">
       <Header />
       <div>
         <SearchParams />
