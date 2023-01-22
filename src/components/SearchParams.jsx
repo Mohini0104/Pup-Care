@@ -28,61 +28,97 @@ const SearchParams = () => {
   }
   return (
     <div>
-      <div className="col-8 mx-auto">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            requestPets();
-          }}
-        >
-          <label htmlFor="location">Location</label>
-          <input
-            onChange={(e) => setLocation(e.target.value)}
-            className="location-input"
-            id="location"
-            placeholder="Location"
-            value={location}
-          />
-          <br />
-          <label htmlFor="animal">
-            Animal
-            <select
-              name="animal"
-              id="animal"
-              value={animal}
-              onChange={(e) => {
-                setAnimal(e.target.value);
-                setBreed("");
-              }}
-            >
-              <option />
-              {ANIMALS.map((animal) => (
-                <option key={animal}>{animal}</option>
-              ))}
-            </select>
-          </label>
-          <br />
-          <label htmlFor="breed">
-            Breed
-            <select
-              name="breed"
-              disabled={breed.length === 0}
-              id="breed"
-              value={breed}
-              onChange={(e) => {
-                setBreed(e.target.value);
-              }}
-            >
-              <option />
-              {BREED.map((breed) => (
-                <option key={breed}>{breed}</option>
-              ))}
-            </select>
-          </label>
-          <br />
-          <button>Submit</button>
-        </form>
-        <Results pets={pets} />
+      <div className="col-12 mx-auto border border-danger d-md-flex py-3">
+        <div className="col-11 col-md-6 mx-auto mx-md-0 border border-danger">
+          <div className="col-md-8 mx-auto">
+            <div className="col-md-12 form-box">
+              <form
+                className="form-section  col-12"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  requestPets();
+                }}
+              >
+                {/*______________LOCATION______________*/}
+                <div className="col-md-10 mx-auto my-3">
+                  <div className="col-md-12">
+                    <label htmlFor="location text-center">Location</label>
+                  </div>
+                  <div className="col-md-12">
+                    <input
+                      onChange={(e) => setLocation(e.target.value)}
+                      className="location-input"
+                      id="location"
+                      placeholder="Location"
+                      value={location}
+                    />
+                  </div>
+                </div>
+
+                {/*______________LOCATION______________*/}
+                {/*______________ANIMAL______________*/}
+                <div className="col-md-10 mx-auto my-3">
+                  <div className="col-md-12">
+                    <label htmlFor="animal">Animal</label>
+                  </div>
+                  <div className="col-md-12">
+                    <select
+                      name="animal"
+                      id="animal"
+                      value={animal}
+                      onChange={(e) => {
+                        setAnimal(e.target.value);
+                        setBreed("");
+                      }}
+                    >
+                      <option />
+                      {ANIMALS.map((animal) => (
+                        <option key={animal} className="options">
+                          {animal}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/*______________ANIMAL______________*/}
+                {/*______________BREED______________*/}
+                <div className="col-md-10 mx-auto my-3">
+                  <div className="col-md-12">
+                    <label htmlFor="breed">Breed</label>
+                  </div>
+                  <div className="col-md-12">
+                    <select
+                      name="breed"
+                      disabled={breed.length === 0}
+                      id="breed"
+                      value={breed}
+                      onChange={(e) => {
+                        setBreed(e.target.value);
+                      }}
+                    >
+                      <option />
+                      {BREED.map((breed) => (
+                        <option key={breed}>{breed}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                {/*______________BREED______________*/}
+                {/*______________SUBMIT BUTTON_____________*/}
+                <div className="col-12 col-md-10 mx-auto mt-3">
+                  <div className="col-7 col-md-5 mx-auto">
+                    <button className="submitBtn">Submit</button>
+                  </div>
+                </div>
+                {/*______________SUBMIT BUTTON_____________*/}
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 my-3 my-md-auto border border-danger">
+          <Results pets={pets} />
+        </div>
       </div>
     </div>
   );
