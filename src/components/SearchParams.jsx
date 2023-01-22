@@ -116,7 +116,7 @@ const SearchParams = () => {
             </div>
           </div>
         </div>
-        <div className="col-6 my-3 my-md-auto border border-danger">
+        <div className="col-12 col-md-6 my-3 my-md-auto border border-danger">
           <Results pets={pets} />
         </div>
       </div>

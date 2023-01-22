@@ -7,15 +7,21 @@ const Pet = (props) => {
   }
 
   return (
-    <a href={`/details/${id}`} className="pet">
-      <div className="image-container">
-        <img src={hero} alt={name} />
+    <div className="col-12">
+      <div className="col-11 col-md-9 mx-auto mb-3 animalInfoCard">
+        <a href={`/details/${id}`} className="pet">
+          <div className="image-container d-flex">
+            <img src={hero} alt={name} className="petImage" />
+            <p className="animalName my-auto ms-3">{name}</p>
+          </div>
+          <div className="info my-3">
+            <p className="animalInfo">
+              Animal: {`${animal} | Breed: ${breed} | Location: ${location}`}
+            </p>
+          </div>
+        </a>
       </div>
-      <div className="info">
-        <h1>{name}</h1>
-        <h2>{`${animal} — ${breed} — ${location}`}</h2>
-      </div>
-    </a>
+    </div>
   );
 };
 
