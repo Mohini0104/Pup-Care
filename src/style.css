@@ -106,6 +106,8 @@ select {
 .animalInfo {
     font-size: 18px;
     color: #252d7e;
+    font-weight: 500;
+    font-family: Roboto;
     text-decoration: none !important;
 }
 
