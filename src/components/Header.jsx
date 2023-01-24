@@ -3,7 +3,7 @@ import LogoCircle from "./images/LogoCircle.png";
 const Header = (props) => {
   return (
     <Link to="/" style={{ textDecoration: "none" }}>
-      <div className="col-12 header-container headerBorderBottom py-2">
+      <div className="col-12 fixed-top header-container headerBorderBottom py-2">
         <div className="col-11 col-md-4  mx-auto">
           <div className="col-md-10 mx-auto ">
             <div className="col-12 ">

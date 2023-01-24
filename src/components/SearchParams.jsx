@@ -9,7 +9,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
-  const [BREED] = useBreedList(animal);
+  const [breeds] = useBreedList(animal);
   /*
   const locationHook = useState("");
   const location = locationHook[0];
@@ -27,8 +27,8 @@ const SearchParams = () => {
     setPets(json.pets);
   }
   return (
-    <div>
-      <div className="col-12 mx-auto  d-md-flex py-3">
+    <div className="mt-5 pt-4">
+      <div className="col-12 mx-auto d-md-flex py-3">
         <div className="col-11 col-md-6 mx-auto mx-md-0 ">
           <div className="col-md-8 mx-auto">
             <div className="col-md-12 form-box ">
@@ -89,8 +89,7 @@ const SearchParams = () => {
                   </div>
                   <div className="col-md-12">
                     <select
-                      name="breed"
-                      disabled={breed.length === 0}
+                      disabled={!breeds.length}
                       id="breed"
                       value={breed}
                       onChange={(e) => {
@@ -98,8 +97,10 @@ const SearchParams = () => {
                       }}
                     >
                       <option />
-                      {BREED.map((breed) => (
-                        <option key={breed}>{breed}</option>
+                      {breeds.map((breed) => (
+                        <option key={breed} value={breed}>
+                          {breed}
+                        </option>
                       ))}
                     </select>
                   </div>
